@@ -1,0 +1,11 @@
+# Python 3.11 (auto_LiRPA >= 0.7 requires Python ~=3.11)
+torch>=2.2,<2.12          # auto_LiRPA 0.7.x pins torch < 2.12 (2.14 was also tested and works)
+auto_LiRPA @ git+https://github.com/Verified-Intelligence/auto_LiRPA.git
+z3-solver>=4.12
+numpy>=2.0
+scipy>=1.11
+matplotlib>=3.8
+hydra-core>=1.3
+omegaconf>=2.3
+streamlit>=1.35
+pytest>=8.0

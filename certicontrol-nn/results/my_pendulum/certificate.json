@@ -1,0 +1,140 @@
+{
+  "system": "inverted_pendulum",
+  "status": "CERTIFIED",
+  "controller_sha256": "a26d7d8942eb7bb599dbf15f53d474cefa317dd070b202d9478e907307eab9c7",
+  "barrier_sha256": "26a83b731cb6faaf4d045f1351752b638a17e20d394c541a566ba18d201d9c36",
+  "summary": {
+    "status": "CERTIFIED",
+    "gamma": 1.0,
+    "seconds": 1.48,
+    "domain_boxes_processed": 255,
+    "domain_leaves": 128,
+    "proven_volume_fraction": 1.0,
+    "leaves_by_method": {
+      "ibp": 0,
+      "crown": 115,
+      "z3": 13
+    },
+    "leaves_outside_safe_set": 49,
+    "face_leaves": 6,
+    "init_leaves": 2,
+    "init_set_certified": true,
+    "z3_calls": 54,
+    "z3_proved": 13,
+    "z3_spurious": 41,
+    "counterexamples": 0,
+    "unknown_boxes": 0
+  },
+  "properties": [
+    "P1 (invariance): for all x in D, B(x) >= 0 implies dB/dt + gamma*B >= 0 under u = pi(x)",
+    "P2 (safety): for all x in D intersect X_unsafe, B(x) < 0",
+    "P3 (containment): for all x on the non-periodic faces of D, B(x) < 0",
+    "P0 (non-triviality): for all x in X_0, B(x) > 0"
+  ],
+  "history": [
+    {
+      "status": "FALSIFIED",
+      "gamma": 1.0,
+      "seconds": 2.54,
+      "domain_boxes_processed": 589,
+      "domain_leaves": 268,
+      "proven_volume_fraction": 0.976486,
+      "leaves_by_method": {
+        "ibp": 0,
+        "crown": 258,
+        "z3": 10
+      },
+      "leaves_outside_safe_set": 69,
+      "face_leaves": 8,
+      "init_leaves": 1,
+      "init_set_certified": true,
+      "z3_calls": 201,
+      "z3_proved": 10,
+      "z3_spurious": 182,
+      "counterexamples": 68,
+      "unknown_boxes": 4,
+      "round": 0,
+      "full_verification": true,
+      "buffer_size": 0,
+      "elapsed": 11.1
+    },
+    {
+      "status": "FALSIFIED",
+      "gamma": 1.0,
+      "seconds": 2.22,
+      "domain_boxes_processed": 537,
+      "domain_leaves": 225,
+      "proven_volume_fraction": 0.998394,
+      "leaves_by_method": {
+        "ibp": 0,
+        "crown": 200,
+        "z3": 25
+      },
+      "leaves_outside_safe_set": 72,
+      "face_leaves": 6,
+      "init_leaves": 2,
+      "init_set_certified": true,
+      "z3_calls": 239,
+      "z3_proved": 25,
+      "z3_spurious": 194,
+      "counterexamples": 48,
+      "unknown_boxes": 2,
+      "round": 1,
+      "full_verification": true,
+      "buffer_size": 1152,
+      "elapsed": 16.0
+    },
+    {
+      "status": "FALSIFIED",
+      "gamma": 1.0,
+      "seconds": 1.92,
+      "domain_boxes_processed": 385,
+      "domain_leaves": 175,
+      "proven_volume_fraction": 0.997227,
+      "leaves_by_method": {
+        "ibp": 0,
+        "crown": 160,
+        "z3": 15
+      },
+      "leaves_outside_safe_set": 62,
+      "face_leaves": 7,
+      "init_leaves": 2,
+      "init_set_certified": true,
+      "z3_calls": 125,
+      "z3_proved": 15,
+      "z3_spurious": 103,
+      "counterexamples": 21,
+      "unknown_boxes": 0,
+      "round": 2,
+      "full_verification": true,
+      "buffer_size": 1952,
+      "elapsed": 20.5
+    },
+    {
+      "status": "CERTIFIED",
+      "gamma": 1.0,
+      "seconds": 1.48,
+      "domain_boxes_processed": 255,
+      "domain_leaves": 128,
+      "proven_volume_fraction": 1.0,
+      "leaves_by_method": {
+        "ibp": 0,
+        "crown": 115,
+        "z3": 13
+      },
+      "leaves_outside_safe_set": 49,
+      "face_leaves": 6,
+      "init_leaves": 2,
+      "init_set_certified": true,
+      "z3_calls": 54,
+      "z3_proved": 13,
+      "z3_spurious": 41,
+      "counterexamples": 0,
+      "unknown_boxes": 0,
+      "round": 3,
+      "full_verification": true,
+      "buffer_size": 2288,
+      "elapsed": 24.5
+    }
+  ]
+}

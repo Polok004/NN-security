@@ -1,0 +1,94 @@
+{
+  "ok": false,
+  "seconds": 39.77593684196472,
+  "details": {
+    "P1+P2 domain": {
+      "leaves": 45115,
+      "coverage_ok": false,
+      "inside": true,
+      "volume": 174.47037287174925,
+      "target_volume": 201.06192982974676,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 13,
+      "recorded_unknown": 54840,
+      "ok": false
+    },
+    "P3 face x0=-2": {
+      "leaves": 357,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 50.265482457436676,
+      "target_volume": 50.26548245743669,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x0=+2": {
+      "leaves": 224,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 50.26548245743668,
+      "target_volume": 50.26548245743669,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x1=-2": {
+      "leaves": 336,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 50.26548245743668,
+      "target_volume": 50.26548245743669,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x1=+2": {
+      "leaves": 527,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 50.26548245743669,
+      "target_volume": 50.26548245743669,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x3=-1": {
+      "leaves": 150,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 100.53096491487341,
+      "target_volume": 100.53096491487338,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x3=+1": {
+      "leaves": 100,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 100.5309649148734,
+      "target_volume": 100.53096491487338,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P0 init": {
+      "leaves": 22444,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 24.630086404143974,
+      "target_volume": 24.630086404143974,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "seconds": 1.0528829097747803,
+  "details": {
+    "P1+P2 domain": {
+      "leaves": 128,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 16.0,
+      "target_volume": 16.0,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x0=-1": {
+      "leaves": 2,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 8.0,
+      "target_volume": 8.0,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x0=+1": {
+      "leaves": 2,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 8.0,
+      "target_volume": 8.0,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x1=-4": {
+      "leaves": 1,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 2.0,
+      "target_volume": 2.0,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P3 face x1=+4": {
+      "leaves": 1,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 2.0,
+      "target_volume": 2.0,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    },
+    "P0 init": {
+      "leaves": 2,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 0.4,
+      "target_volume": 0.4,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    }
+  }
+}

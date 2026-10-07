@@ -1,0 +1,100 @@
+{
+  "system": "inverted_pendulum",
+  "ablation": [
+    {
+      "method": "IBP only",
+      "status": "CERTIFIED",
+      "seconds": 1.54,
+      "boxes_processed": 433573,
+      "leaves": 216787,
+      "proven_volume_fraction": 1.0,
+      "z3_proved": 0,
+      "unknown_boxes": 0,
+      "counterexamples": 0
+    },
+    {
+      "method": "IBP + CROWN",
+      "status": "CERTIFIED",
+      "seconds": 1.62,
+      "boxes_processed": 329,
+      "leaves": 165,
+      "proven_volume_fraction": 1.0,
+      "z3_proved": 0,
+      "unknown_boxes": 0,
+      "counterexamples": 0
+    },
+    {
+      "method": "IBP + CROWN + Z3 (full)",
+      "status": "CERTIFIED",
+      "seconds": 1.52,
+      "boxes_processed": 279,
+      "leaves": 140,
+      "proven_volume_fraction": 1.0,
+      "z3_proved": 11,
+      "unknown_boxes": 0,
+      "counterexamples": 0
+    }
+  ],
+  "gamma_sweep": [
+    {
+      "gamma": 0.25,
+      "status": "CERTIFIED",
+      "counterexamples": 0,
+      "proven_volume_fraction": 1.0,
+      "seconds": 1.72
+    },
+    {
+      "gamma": 0.5,
+      "status": "CERTIFIED",
+      "counterexamples": 0,
+      "proven_volume_fraction": 1.0,
+      "seconds": 1.62
+    },
+    {
+      "gamma": 1.0,
+      "status": "CERTIFIED",
+      "counterexamples": 0,
+      "proven_volume_fraction": 1.0,
+      "seconds": 1.52
+    },
+    {
+      "gamma": 2.0,
+      "status": "CERTIFIED",
+      "counterexamples": 0,
+      "proven_volume_fraction": 1.0,
+      "seconds": 1.42
+    },
+    {
+      "gamma": 4.0,
+      "status": "CERTIFIED",
+      "counterexamples": 0,
+      "proven_volume_fraction": 1.0,
+      "seconds": 1.45
+    }
+  ],
+  "dense_sampling": {
+    "samples": 2000000,
+    "domain_violations": 0,
+    "boundary_violations": 0,
+    "init_violations": 0,
+    "fraction_of_D_in_C": 0.119725
+  },
+  "rollouts": {
+    "X0": {
+      "rollouts": 300,
+      "horizon_s": 10.0,
+      "reached_unsafe": 0,
+      "left_C": 0,
+      "left_D": 0,
+      "min_B_along_rollouts": 0.01666656303174019
+    },
+    "C": {
+      "rollouts": 300,
+      "horizon_s": 10.0,
+      "reached_unsafe": 0,
+      "left_C": 0,
+      "left_D": 0,
+      "min_B_along_rollouts": 6.80683346209604e-05
+    }
+  }
+}

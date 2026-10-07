@@ -1,0 +1,35 @@
+{
+  "system": "dubins_car",
+  "dense_sampling": {
+    "samples": 2000000,
+    "domain_violations": 23,
+    "boundary_violations": 0,
+    "init_violations": 0,
+    "fraction_of_D_in_C": 0.2695635
+  },
+  "rollouts": {
+    "X0": {
+      "rollouts": 50,
+      "horizon_s": 10.0,
+      "reached_unsafe": 0,
+      "left_C": 0,
+      "left_D": 0,
+      "min_B_along_rollouts": 0.1626879191528744
+    },
+    "C": {
+      "rollouts": 50,
+      "horizon_s": 10.0,
+      "reached_unsafe": 0,
+      "left_C": 0,
+      "left_D": 0,
+      "min_B_along_rollouts": 0.004083026485686148
+    }
+  },
+  "counterexample_rollouts": {
+    "rollouts": 50,
+    "horizon_s": 3.0,
+    "left_C": 41,
+    "reached_unsafe": 0,
+    "min_B": -0.031518349829868675
+  }
+}

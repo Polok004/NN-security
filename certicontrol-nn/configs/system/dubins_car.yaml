@@ -1,0 +1,39 @@
+# @package _global_
+# 4-D Dubins car (px, py, theta, v) with acceleration control and a circular obstacle:
+#   px' = v cos(theta), py' = v sin(theta), theta' = u1, v' = u2
+system:
+  name: dubins_car
+  arena: 2.0                 # D = [-2,2]^2 x S^1 x [-v_max, v_max]; walls must never be crossed
+  v_max: 1.0
+  omega_max: 2.0
+  a_max: 2.0
+  obstacle_center: [0.0, 0.0]
+  obstacle_radius: 0.6
+  init_xy: 1.4               # X_0: |px|,|py| <= 1.4, |v| <= 0.25, >= 0.35 clearance from obstacle
+  init_v: 0.25
+  goal: [1.4, 1.4]           # nominal goal-seeking behaviour (soft imitation term)
+  v_des: 0.5
+  train_inflation: 0.08     # training-only: push C 0.08 away from the obstacle (P2 is verified on the true disc)
+
+train:
+  lr: 3.0e-3
+  steps_initial: 10000
+  steps_per_round: 1500
+  batch_domain: 4096
+  margin: 0.01
+  w_unsafe: 10.0
+  w_boundary: 10.0
+  w_init: 10.0
+  w_nominal: 0.005
+  w_cex: 5.0
+
+verify:
+  batch_size: 16384
+  max_boxes: 6000000
+  max_depth: 10
+  z3_depth: 6
+  z3_max_boxes: 5000
+  quick_max_depth: 7        # intermediate CGIS rounds: coarse falsification pass
+  quick_max_boxes: 150000
+
+max_rounds: 40

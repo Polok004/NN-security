@@ -1,0 +1,32 @@
+{
+  "ok": false,
+  "seconds": 167.13589906692505,
+  "details": {
+    "P1+P2 domain": {
+      "leaves": 381160,
+      "coverage_ok": false,
+      "inside": true,
+      "volume": 199.927718816254,
+      "target_volume": 201.06192982974676,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 533,
+      "recorded_unknown": 277432,
+      "ok": false
+    },
+    "P3 faces": {
+      "ok": false,
+      "reason": "missing faces"
+    },
+    "P0 init": {
+      "leaves": 22399,
+      "coverage_ok": true,
+      "inside": true,
+      "volume": 24.630086404143974,
+      "target_volume": 24.630086404143974,
+      "failed_leaves": 0,
+      "recorded_counterexamples": 0,
+      "recorded_unknown": 0,
+      "ok": true
+    }
+  }
+}

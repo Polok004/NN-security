@@ -1,0 +1,17 @@
+# @package _global_
+# 2-D torque-limited inverted pendulum:  theta'' = (g/l) sin(theta) - b/(m l^2) theta' + u/(m l^2)
+# Safety: |theta| < theta_unsafe.  u_max < m g l sin(theta_unsafe): the torque
+# limit, not the unsafe set, bounds the largest invariant set.
+system:
+  name: inverted_pendulum
+  m: 1.0
+  l: 1.0
+  b: 0.1
+  grav: 9.81
+  u_max: 6.0
+  theta_unsafe: 0.8
+  theta_lim: 1.0        # domain D = [-theta_lim, theta_lim] x [-omega_lim, omega_lim]
+  omega_lim: 4.0
+  init_theta: 0.25      # X_0 = [-0.25, 0.25] x [-0.4, 0.4]
+  init_omega: 0.4
+  omega_scale: 4.0

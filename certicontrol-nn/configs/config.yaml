@@ -1,0 +1,67 @@
+# CertiControl-NN main configuration (Hydra).
+# Select a system with:  python scripts/train_and_certify.py system=dubins_car
+defaults:
+  - _self_
+  - system: inverted_pendulum
+
+seed: 0
+gamma: 1.0            # class-K function alpha(B) = gamma * B
+max_rounds: 20        # CGIS rounds (train -> verify -> counterexamples)
+device: cpu           # auto_LiRPA + float64 verification run on CPU (MPS lacks float64)
+output_dir: results/${system.name}
+resume: false         # resume CGIS from <output_dir>/checkpoint.pt
+
+model:
+  ctrl_hidden: [32, 32]
+  barrier_hidden: [32, 32]
+
+train:
+  lr: 1.0e-3
+  steps_initial: 2000
+  steps_per_round: 500
+  batch_domain: 2048
+  batch_unsafe: 1024
+  batch_boundary: 1024
+  batch_init: 1024
+  batch_cex: 1024
+  margin: 0.02
+  lie_band: 0.01
+  lie_temp: 0.01
+  w_lie: 1.0
+  w_unsafe: 1.0
+  w_boundary: 1.0
+  w_init: 5.0
+  w_cex: 2.0
+  w_nominal: 0.0
+  w_lipschitz: 1.0e-3
+  lip_delta: 0.01
+  focus_fraction: 0.5
+  lr_final_ratio: 0.05
+  weight_decay: 1.0e-5
+  cex_jitter: 0.02
+  cex_copies: 16
+  max_buffer: 200000
+  log_every: 500
+
+verify:
+  use_crown: true       # auto_LiRPA CROWN linear relaxation
+  use_z3: true          # Z3 pointwise reasoning over CROWN linear bounds
+  tol: 1.0e-8           # strict-inequality / floating-point safety margin
+  batch_size: 8192
+  max_boxes: 2000000
+  max_depth: 12         # smallest box = domain width * 2^-max_depth (per dim)
+  max_cex: 512
+  z3_max_boxes: 20000
+  z3_timeout_ms: 5000
+  z3_depth: 4           # Z3 is tried on boxes of relative width <= 2^-z3_depth
+  cex_split_depth: 4    # falsified boxes keep being split (exploration) down to this depth
+  smart_split: false    # true: split the coordinate with the largest CROWN |coefficient| x width
+  quick_max_depth: null # set to use a cheaper verification in intermediate CGIS rounds
+  quick_max_boxes: 200000
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job:
+    chdir: false

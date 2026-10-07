@@ -1,0 +1,9 @@
+__pycache__/
+.pytest_cache/
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+results/*/checkpoint.pt
+*.log
